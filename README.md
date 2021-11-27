@@ -5,7 +5,7 @@ Inpsired by the github dimmed dark website theme.
 ![Preview](https://github.com/tobealive/trilium-theme-eote/blob/main/preview.jpg)
 
 ## Installation
-- Create a new note inside your Trilium Notes and set the Note Type to "CSS"
-- Copy the Theme CSS code inside the Note you just created
-- Add the label "#appCss" (one way to do that inside the "Owned Attributes" on the Top of your note)
-- Reload (Ctrl+R)
+1. Create a new note inside your Trilium Notes and set the Note Type to _CSS_
+2. Copy the Theme CSS code inside the Note you just created
+3. Add the label _#appCss_ (one way to do that inside the _Owned Attributes_ on the Top of your note)
+4. Reload (Ctrl+R)
