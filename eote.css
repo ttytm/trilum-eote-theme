@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,800,800i,900i&display=swap');
+
+:root {
+    --darkBG: #22272e;
+    --medBG: #2d333b;
+}
+body {
+    --main-font-family: 'Nunito', sans-serif;
+    --main-text-color: #adbac7;
+    --muted-text-color: #757d86;
+    --menu-text-color: var(--main-text-color);
+    --main-background-color: var(--darkBG);
+    --main-border-color: #7a8ba654;
+    --accented-background-color: #232425;
+    --more-accented-background-color: #4c4e68;
+    --header-background-color: #393838;
+    --button-background-color: ;
+    --hover-item-background-color: ;
+    --button-border-color: #8d9ca39c;
+    --button-border-radius: 0px;
+    --link-color: #52a2ff;
+    --modal-background-color: #282525;
+    --launcher-pane-background-color: var(--medBG);
+    --left-pane-background-color: var(--medBG);
+    --inactive-tab-background-color: var(--medBG);
+    --accented-background-color: var(--medBG);
+    --active-tab-background-color: var(--darkBG);
+    --active-item-background-color: var(--darkBG);
+    --modal-background-color: var(--darkBG);
+    --active-item-text-color: #f8f9fa;
+    --menu-background-color: var(--darkBG);
+    --tooltip-background-color: var(--darkBG);
+    --hover-item-background-color: var(--medBG);
+    --hover-item-text-color: var(--menu-text-color);
+    --tree-font-family: var(--main-font-family);
+    --detail-font-family: var(--main-font-family);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700 !important;
+}
+.CodeMirror-lines {
+  color: turquoise !important;
+  font-size: 0.9rem !important;
+}
+
+/* Make the code editor readable */
+.cm-s-default .cm-builtin { color: #9368f7 !important; }
+.cm-s-default .cm-qualifier { color: #4d9c28 !important; }
+.cm-s-default .cm-atom { color: #d23a8c !important; }
+
+/* Notecards */
+.note-book-card {
+    border-radius: 5px !important;
+    margin: 4px 7px 4px 0 !important;
+} 
+/* Tab bar */
+.tab-row-widget-container {
+    background: var(--medBG);
+    height: 36px !important;
+}
+/* Menus & Tooltips */
+.dropdown-item.disabled span, .dropdown-item.disabled span kbd {
+ color: #757d86 !important;    
+}
+.dropdown-item span kbd {
+    margin-left: 10px;
+    font-family:  var(--main-font-family) !important;
+    font-weight: 300 !important;;
+}
+.dropdown-divider, .modal-header, .modal-footer {
+    border-color: var(--medBG) !important;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: var(--medBG) !important;
+    border: none !important;
+    outline: none;
+}
+/* Left Pane */
+#root-widget #launcher-pane .global-menu-button {
+    background-size: 30px;
+}
+#root-widget #launcher-pane .icon-action:hover {
+    color: #f9826c !important;
+}
+#root-widget #launcher-pane {
+    border-right: 1px solid #22272e;
+}
+/* Tree */
+.ui-fancytree ul {
+    padding-left: 0 !important;
+}
+.ui-fancytree li li span.fancytree-active {
+    border-left: 3px solid #f9826c !important;
+}
+.tree-actions {
+    border: 1px solid #22272e;
+    border-bottom: 0;
+}
+button.tree-floating-button {
+    font-size: 1.3em !important;
+}
+/* Left-Pane Nested List - full width background for hover and active status. 
+It's also possible to use Themes jQuery Script. Without the script use the code below. Extend for deeper nesting structure if neccecary */
+.ui-fancytree li span.fancytree-node {
+    padding-left: 0;
+} 
+.ui-fancytree li li span.fancytree-node {
+    padding-left: 15px;
+}
+.ui-fancytree li li li span.fancytree-node {
+    padding-left: 30px;
+}
+.ui-fancytree li li li li span.fancytree-node {
+    padding-left: 45px;
+}
+.ui-fancytree li li li li li span.fancytree-node {
+    padding-left: 60px;
+}
+.ui-fancytree li li li li li li span.fancytree-node {
+    padding-left: 75px;
+}
+.ui-fancytree li li li li li li li span.fancytree-node {
+    padding-left: 90px;
+}
+.ui-fancytree li li li li li li li li span.fancytree-node {
+    padding-left: 105px;
+}
+.ui-fancytree li li li li li li li li li span.fancytree-node {
+    padding-left: 120px;
+}
+.ui-fancytree li li li li li li li li li li span.fancytree-node {
+    padding-left: 135px;
+}
+.ui-fancytree li li li li li li li li li li li span.fancytree-node {
+    padding-left: 150px;
+}
+
+/*** General Fixes ***/
+/* Borders */
+.note-tab-wrapper, .fancytree-node {
+    border-radius: 0 !important;
+}
+.note-tab-wrapper {
+    border-right: 1px solid var(--darkBG);
+    margin-left: -5px;
+}
+.note-title-widget input {
+    outline: none !important;
+}
+/* Icons */
+#root-widget #launcher-pane .icon-action, #root-widget .ribbon-tab-title .bx {
+    font-size: 130%;
+    text-align: center;
+}
+/* Scrollbars */
+::-webkit-scrollbar {
+    width: 8px !important;
+}
+::-webkit-scrollbar-thumb {
+    background: #4f5052 !important;
+    border-width: 0 !important;
+    border-radius: 0 !important;
+}
