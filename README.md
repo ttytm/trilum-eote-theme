@@ -10,4 +10,4 @@ Inpsired by the github dimmed dark website theme.
 3. Add the label _#appCss_ (You can do that in the _Owned Attributes_ on the top of your note)
 4. Reload (Ctrl+R) 
 
-*I'm doing my best to implement improvements and fix issues as soon as i see them. I'll update the theme from time to time. */
+*I'm doing my best to implement improvements and fix issues as soon as i see them. I'll update the theme from time to time.*
