@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,800,800i,900i&display=swap');
-
 :root {
     --darkBG: #22272e;
     --medBG: #2d333b;
 }
 body {
-    --main-font-family: 'Nunito', sans-serif;
+    --main-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
     --main-text-color: #adbac7;
     --muted-text-color: #757d86;
     --menu-text-color: var(--main-text-color);
@@ -29,24 +27,19 @@ body {
     --modal-background-color: var(--darkBG);
     --active-item-text-color: #f8f9fa;
     --menu-background-color: var(--darkBG);
-    --tooltip-background-color: var(--darkBG);
+    --tooltip-background-color: #3f4041;
     --hover-item-background-color: var(--medBG);
     --hover-item-text-color: var(--menu-text-color);
     --tree-font-family: var(--main-font-family);
     --detail-font-family: var(--main-font-family);
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .note-title-widget input {
     font-weight: 700 !important;
 }
-.CodeMirror-lines {
-  color: turquoise !important;
-  font-size: 0.9rem !important;
-}
 
-/* Make the code editor readable */
-.cm-s-default .cm-builtin { color: #9368f7 !important; }
-.cm-s-default .cm-qualifier { color: #4d9c28 !important; }
-.cm-s-default .cm-atom { color: #d23a8c !important; }
+.CodeMirror-lines {
+  font-size: 0.95rem !important;
+}
 
 /* Notecards */
 .note-book-card {
@@ -95,12 +88,16 @@ h1, h2, h3, h4, h5, h6 {
 .ui-fancytree li li span.fancytree-active {
     border-left: 3px solid #f9826c !important;
 }
+#root-widget .fancytree-title {
+    top: 0;
+    /*font-weight: 400;*/
+}
 .tree-actions {
     border: 1px solid #22272e;
     border-bottom: 0;
 }
 button.tree-floating-button {
-    font-size: 1.3em !important;
+    font-size: 1.3rem !important;
 }
 /* Left-Pane Nested List - full width background for hover and active status. 
 It's also possible to use Themes jQuery Script. Without the script use the code below. Extend for deeper nesting structure if neccecary */
@@ -139,15 +136,15 @@ It's also possible to use Themes jQuery Script. Without the script use the code 
 }
 /*** General Fixes ***/
 /* Borders */
-.note-tab-wrapper, .fancytree-node {
-    border-radius: 0 !important;
+#root-widget .note-tab-wrapper, #root-widget .fancytree-node {
+    border-radius: 0;
 }
-.note-tab-wrapper {
+#root-widget .note-tab-wrapper {
     border-right: 1px solid var(--darkBG);
     margin-left: -5px;
 }
-.note-title-widget input {
-    outline: none !important;
+#root-widget .note-title-widget input {
+    outline: none;
 }
 /* Icons */
 #root-widget #launcher-pane .icon-action, #root-widget .ribbon-tab-title .bx {
