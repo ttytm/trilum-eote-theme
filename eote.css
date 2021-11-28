@@ -40,65 +40,134 @@ h1, h2, h3, h4, h5, h6, .note-title-widget input {
 .CodeMirror-lines {
   font-size: 0.95rem !important;
 }
-
+/* Note Title */
+#root-widget .title-row {
+    margin-bottom: 15px;
+}
+#root-widget .note-title {
+    font-size: 160%;
+    line-height: 50px;
+}
+/* Note Content */
+#root-widget .note-detail-editable-text {
+    padding-top: 0;
+}
+#root-widget .CodeMirror-lines {
+    padding-top: 0;
+}
+#root-widget .ribbon-container {
+    margin-bottom: 15px;
+}
 /* Notecards */
-.note-book-card {
-    border-radius: 5px !important;
-    margin: 4px 7px 4px 0 !important;
+#root-widget .note-book-card {
+    border-radius: 5px;
+    margin: 4px 7px 4px 0;
 } 
-/* Tab bar */
-.tab-row-widget-container {
+/* Tabs */
+#root-widget .tab-row-widget-container {
     background: var(--medBG);
-    height: 36px !important;
+    height: 36px;
+}
+#root-widget .ribbon-tab-title.active {
+    border-color: #f9826c;
 }
 /* Menus & Tooltips */
-.dropdown-item.disabled span, .dropdown-item.disabled span kbd {
- color: #757d86 !important;    
+#root-widget .dropdown-menu {
+    padding: 3px 0 4px;
+    margin: 0;
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+    border: none;
 }
-.dropdown-item span kbd {
+.dropdown-item {
+    padding: 3px 10px 2.5px !important;
+    line-height: 24px;
+}
+.dropdown-item kbd {
     margin-left: 10px;
     font-family:  var(--main-font-family) !important;
-    font-weight: 300 !important;;
+    font-weight: 300 !important;
+    font-size: 0.80rem;
+    color: #9aa0a6 !important;
+}
+.dropdown-item span.bx {
+    line-height: 24px;
+    font-size: 0.90rem;
+    margin-right: 3px;
+    color: #9aa0a6 !important;
+}
+.dropdown-item.disabled span {
+ color: #757d86 !important;    
 }
 .dropdown-divider, .modal-header, .modal-footer {
-    border-color: var(--medBG) !important;
+    border-color: var(--darkBG) !important;
 }
 .dropdown-item:focus, .dropdown-item:hover {
-    background-color: var(--medBG) !important;
+    background-color: var(--darkBG) !important;
     border: none !important;
     outline: none;
 }
+.tooltip-inner {
+    padding: 5px 8px 6px !important;
+    font-size: 0.95rem !important;
+}
+.tooltip .arrow {
+    opacity: 0.8 !important;
+}
 /* Left Pane */
-#root-widget #launcher-pane .global-menu-button {
-    background-size: 30px;
-}
-#root-widget #launcher-pane .icon-action:hover {
-    color: #f9826c !important;
-}
 #root-widget #launcher-pane {
     border-right: 1px solid #22272e;
 }
+#root-widget #launcher-pane .global-menu-button {
+    background-size: 30px;
+}
+#root-widget #launcher-pane .icon-action {
+    width: 50px;
+    padding-left: 15.5px;
+}
+#root-widget #launcher-pane .icon-action:hover {
+    color: #f9826c;
+}
 /* Tree */
-.ui-fancytree ul {
-    padding-left: 0 !important;
+#root-widget .ui-fancytree ul {
+    padding-left: 0;
 }
-.fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
-    font-size: 1rem !important;
+#root-widget .treeitem {
+    position: relative;
 }
-.ui-fancytree li li span.fancytree-active {
+#root-widget .fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
+    font-size: 1rem;
+}
+#root-widget .ui-fancytree li li span.fancytree-active {
     border-left: 3px solid #f9826c !important;
 }
 #root-widget .fancytree-title {
     top: 0;
     /*font-weight: 400;*/
 }
-.tree-actions {
+#root-widget .tree-actions {
     border: 1px solid #22272e;
     border-bottom: 0;
 }
-button.tree-floating-button {
-    font-size: 1.3rem !important;
+#root-widget button.tree-floating-button {
+    font-size: 1.3rem;
+    border: none;
 }
+#root-widget .bx.tree-item-button {
+    font-size: inherit;
+    line-height: 38px;
+    height: 38px;
+    padding-top: 2px;
+    border: none;
+    position: absolute;
+    right: 10px;
+}
+#root-widget .bx.tree-item-button:hover, #root-widget button.tree-floating-button:hover {
+    color: #f9826c;
+}
+/*root-widget button.tree-floating-button:hover {
+    border: none;
+    color: #f9826c;
+}*/
 /* Left-Pane Nested List - full width background for hover and active status. 
 It's also possible to use Themes jQuery Script. Without the script use the code below. Extend for deeper nesting structure if neccecary */
 .ui-fancytree > li > span.fancytree-node {
@@ -148,7 +217,7 @@ It's also possible to use Themes jQuery Script. Without the script use the code 
 }
 /* Icons */
 #root-widget #launcher-pane .icon-action, #root-widget .ribbon-tab-title .bx {
-    font-size: 130%;
+    font-size: 1.3rem;
     text-align: center;
 }
 /* Scrollbars */
