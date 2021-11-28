@@ -89,6 +89,9 @@ h1, h2, h3, h4, h5, h6 {
 .ui-fancytree ul {
     padding-left: 0 !important;
 }
+.fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
+    font-size: 1rem !important;
+}
 .ui-fancytree li li span.fancytree-active {
     border-left: 3px solid #f9826c !important;
 }
@@ -101,40 +104,39 @@ button.tree-floating-button {
 }
 /* Left-Pane Nested List - full width background for hover and active status. 
 It's also possible to use Themes jQuery Script. Without the script use the code below. Extend for deeper nesting structure if neccecary */
-.ui-fancytree li span.fancytree-node {
-    padding-left: 0;
+.ui-fancytree > li > span.fancytree-node {
+    padding-left: 10px !important;
 } 
-.ui-fancytree li li span.fancytree-node {
-    padding-left: 15px;
+.ui-fancytree > li > ul > li > span.fancytree-node {
+    padding-left: 10px !important;
 }
 .ui-fancytree li li li span.fancytree-node {
-    padding-left: 30px;
+    padding-left: 25px;
 }
 .ui-fancytree li li li li span.fancytree-node {
-    padding-left: 45px;
+    padding-left: 40px;
 }
 .ui-fancytree li li li li li span.fancytree-node {
-    padding-left: 60px;
+    padding-left: 55px;
 }
 .ui-fancytree li li li li li li span.fancytree-node {
-    padding-left: 75px;
+    padding-left: 70px;
 }
 .ui-fancytree li li li li li li li span.fancytree-node {
-    padding-left: 90px;
+    padding-left: 85px;
 }
 .ui-fancytree li li li li li li li li span.fancytree-node {
-    padding-left: 105px;
+    padding-left: 100px;
 }
 .ui-fancytree li li li li li li li li li span.fancytree-node {
-    padding-left: 120px;
+    padding-left: 115px;
 }
 .ui-fancytree li li li li li li li li li li span.fancytree-node {
-    padding-left: 135px;
+    padding-left: 130px;
 }
 .ui-fancytree li li li li li li li li li li li span.fancytree-node {
-    padding-left: 150px;
+    padding-left: 145px;
 }
-
 /*** General Fixes ***/
 /* Borders */
 .note-tab-wrapper, .fancytree-node {
