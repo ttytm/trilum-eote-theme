@@ -1,231 +1,267 @@
 :root {
-    --darkBG: #22272e;
-    --medBG: #2d333b;
+  /* Color Palette */
+  --darkBG: #22272e;
+  --medBG: #2d333b;
 }
 body {
-    --main-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-    --main-text-color: #adbac7;
-    --muted-text-color: #757d86;
-    --menu-text-color: var(--main-text-color);
-    --main-background-color: var(--darkBG);
-    --main-border-color: #7a8ba654;
-    --accented-background-color: #232425;
-    --more-accented-background-color: #4c4e68;
-    --header-background-color: #393838;
-    --button-background-color: ;
-    --hover-item-background-color: ;
-    --button-border-color: #8d9ca39c;
-    --button-border-radius: 0px;
-    --link-color: #52a2ff;
-    --modal-background-color: #282525;
-    --launcher-pane-background-color: var(--medBG);
-    --left-pane-background-color: var(--medBG);
-    --inactive-tab-background-color: var(--medBG);
-    --accented-background-color: var(--medBG);
-    --active-tab-background-color: var(--darkBG);
-    --active-item-background-color: var(--darkBG);
-    --modal-background-color: var(--darkBG);
-    --active-item-text-color: #f8f9fa;
-    --menu-background-color: var(--darkBG);
-    --tooltip-background-color: #3f4041;
-    --hover-item-background-color: var(--medBG);
-    --hover-item-text-color: var(--menu-text-color);
-    --tree-font-family: var(--main-font-family);
-    --detail-font-family: var(--main-font-family);
-}
-h1, h2, h3, h4, h5, h6, .note-title-widget input {
-    font-weight: 700 !important;
+  /* Backgrounds */
+  --main-background-color: var(--darkBG);
+  --main-border-color: #7a8ba654;
+  --menu-background-color: var(--darkBG);
+  --accented-background-color: #232425;
+  --more-accented-background-color: #4c4e68;
+  --header-background-color: #393838;
+  --modal-background-color: #282525;
+  --launcher-pane-background-color: var(--medBG);
+  --left-pane-background-color: var(--medBG);
+  --inactive-tab-background-color: var(--medBG);
+  --accented-background-color: var(--medBG);
+  --active-tab-background-color: var(--darkBG);
+  --active-item-background-color: var(--darkBG);
+  --modal-background-color: var(--darkBG);
+  --active-item-text-color: #f8f9fa;
+  --tooltip-background-color: #3f4041;
+  --hover-item-background-color: var(--medBG);
+  --button-border-color: #8d9ca39c;
+  --button-border-radius: 0;
+  /* Fonts */
+  --main-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --main-text-color: #adbac7;
+  --detail-font-family: var(--main-font-family);
+  --tree-font-family: var(--main-font-family);
+  --hover-item-text-color: var(--menu-text-color);
+  --link-color: #52a2ff;
+  --muted-text-color: #757d86;
 }
 
-.CodeMirror-lines {
-  font-size: 0.95rem !important;
+/* Using #root-widget ID to override main theme styles without the use of !important */
+
+/* Typography General */
+#root-widget h1,
+#root-widget h2,
+#root-widget h3,
+#root-widget h4,
+#root-widget h5,
+#root-widget h6 {
+  font-weight: 700;
+}
+#root-widget h2 {
+  margin-block-start: 1em;
+  margin-block-end: 0.83em;
+}
+#root-widget h3 {
+  margin-block-start: 1.2em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+#root-widget .CodeMirror-lines {
+  font-size: 0.95rem;
 }
 /* Note Title */
 #root-widget .title-row {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 #root-widget .note-title {
-    font-size: 160%;
-    line-height: 50px;
-}
-/* Note Content */
-#root-widget .note-detail-editable-text {
-    padding-top: 0;
-}
-#root-widget .CodeMirror-lines {
-    padding-top: 0;
-}
-#root-widget .ribbon-container {
-    margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 160%;
+  line-height: 50px;
 }
 /* Notecards */
 #root-widget .note-book-card {
-    border-radius: 5px;
-    margin: 4px 7px 4px 0;
-} 
-/* Tabs */
-#root-widget .tab-row-widget-container {
-    background: var(--medBG);
-    height: 36px;
+  margin: 4px 7px 4px 0;
+  border-radius: 5px;
 }
-#root-widget .ribbon-tab-title.active {
-    border-color: #f9826c;
+#root-widget .note-book-card h2 {
+  font-size: 1.25em;
+
+  margin-block-start: 0.3em;
 }
-/* Menus & Tooltips */
-#root-widget .dropdown-menu {
-    padding: 3px 0 4px;
-    margin: 0;
-    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
-    border: none;
+#root-widget .note-book-card .note-book-title .rendered-note-attributes {
+  font-weight: 400;
 }
-.dropdown-item {
-    padding: 3px 10px 2.5px !important;
-    line-height: 24px;
-}
-.dropdown-item kbd {
-    margin-left: 10px;
-    font-family:  var(--main-font-family) !important;
-    font-weight: 300 !important;
-    font-size: 0.80rem;
-    color: #9aa0a6 !important;
-}
-.dropdown-item span.bx {
-    line-height: 24px;
-    font-size: 0.90rem;
-    margin-right: 3px;
-    color: #9aa0a6 !important;
-}
-.dropdown-item.disabled span {
- color: #757d86 !important;    
-}
-.dropdown-divider, .modal-header, .modal-footer {
-    border-color: var(--darkBG) !important;
-}
-.dropdown-item:focus, .dropdown-item:hover {
-    background-color: var(--darkBG) !important;
-    border: none !important;
-    outline: none;
-}
-.tooltip-inner {
-    padding: 5px 8px 6px !important;
-    font-size: 0.95rem !important;
-}
-.tooltip .arrow {
-    opacity: 0.8 !important;
-}
-/* Left Pane */
+/* Left Pane General */
 #root-widget #launcher-pane {
-    border-right: 1px solid #22272e;
+  border-right: 1px solid #22272e;
 }
 #root-widget #launcher-pane .global-menu-button {
-    background-size: 30px;
+  background-size: 30px;
 }
 #root-widget #launcher-pane .icon-action {
-    width: 50px;
-    padding-left: 15.5px;
+  padding-left: 15.5px;
+  width: 50px;
 }
 #root-widget #launcher-pane .icon-action:hover {
-    color: #f9826c;
+  color: #f9826c;
 }
 /* Tree */
 #root-widget .ui-fancytree ul {
-    padding-left: 0;
+  padding-left: 0;
 }
 #root-widget .treeitem {
-    position: relative;
+  position: relative;
 }
-#root-widget .fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
-    font-size: 1rem;
+#root-widget
+  .fancytree-node:not(.fancytree-loading)
+  .fancytree-expander:before {
+  font-size: 1rem;
 }
 #root-widget .ui-fancytree li li span.fancytree-active {
-    border-left: 3px solid #f9826c !important;
+  border-left: 3px solid #f9826c !important;
 }
 #root-widget .fancytree-title {
-    top: 0;
-    /*font-weight: 400;*/
+  top: 0;
 }
 #root-widget .tree-actions {
-    border: 1px solid #22272e;
-    border-bottom: 0;
+  border: 1px solid #22272e;
+  border-bottom: 0;
 }
 #root-widget button.tree-floating-button {
-    font-size: 1.3rem;
-    border: none;
+  border: none;
+  font-size: 1.3rem;
 }
 #root-widget .bx.tree-item-button {
-    font-size: inherit;
-    line-height: 38px;
-    height: 38px;
-    padding-top: 2px;
-    border: none;
-    position: absolute;
-    right: 10px;
+  position: absolute;
+  right: 10px;
+  padding-top: 2px;
+  height: 38px;
+  border: none;
+  font-size: inherit;
+  line-height: 38px;
 }
-#root-widget .bx.tree-item-button:hover, #root-widget button.tree-floating-button:hover {
-    color: #f9826c;
+#root-widget .bx.tree-item-button:hover,
+#root-widget button.tree-floating-button:hover {
+  color: #f9826c;
 }
-/*root-widget button.tree-floating-button:hover {
-    border: none;
-    color: #f9826c;
-}*/
-/* Left-Pane Nested List - full width background for hover and active status. 
-It's also possible to use Themes jQuery Script. Without the script use the code below. Extend for deeper nesting structure if neccecary */
+/* Treeview - full width background indicator for hover and active status. 
+* A generic version of the style below can ne achieved using jQuery. Script is not written yet. 
+* Until then to support deeper structures just extend the code below */
 .ui-fancytree > li > span.fancytree-node {
-    padding-left: 10px !important;
-} 
+  padding-left: 10px;
+}
 .ui-fancytree > li > ul > li > span.fancytree-node {
-    padding-left: 10px !important;
+  padding-left: 10px;
 }
 .ui-fancytree li li li span.fancytree-node {
-    padding-left: 25px;
+  padding-left: 25px;
 }
 .ui-fancytree li li li li span.fancytree-node {
-    padding-left: 40px;
+  padding-left: 40px;
 }
 .ui-fancytree li li li li li span.fancytree-node {
-    padding-left: 55px;
+  padding-left: 55px;
 }
 .ui-fancytree li li li li li li span.fancytree-node {
-    padding-left: 70px;
+  padding-left: 70px;
 }
 .ui-fancytree li li li li li li li span.fancytree-node {
-    padding-left: 85px;
+  padding-left: 85px;
 }
 .ui-fancytree li li li li li li li li span.fancytree-node {
-    padding-left: 100px;
+  padding-left: 100px;
 }
 .ui-fancytree li li li li li li li li li span.fancytree-node {
-    padding-left: 115px;
+  padding-left: 115px;
 }
 .ui-fancytree li li li li li li li li li li span.fancytree-node {
-    padding-left: 130px;
+  padding-left: 130px;
 }
 .ui-fancytree li li li li li li li li li li li span.fancytree-node {
-    padding-left: 145px;
+  padding-left: 145px;
 }
-/*** General Fixes ***/
+/* Menus & Tooltips */
+#root-widget .dropdown-menu {
+  margin: 0;
+  padding: 3px 0 4px;
+  border: none;
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+    0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+#root-widget .dropdown-item {
+  padding: 3px 10px 2.5px;
+  line-height: 24px;
+}
+#root-widget .dropdown-item kbd {
+  margin-left: 10px;
+  color: #9aa0a6;
+  font-weight: 300;
+  font-size: 0.8rem;
+  font-family: var(--main-font-family);
+}
+#root-widget .dropdown-item span.bx {
+  margin-right: 3px;
+  color: #9aa0a6;
+  font-size: 0.9rem;
+  line-height: 24px;
+}
+#root-widget .dropdown-item.disabled span {
+  color: #757d86;
+}
+#root-widget .dropdown-divider,
+#root-widget .modal-footer,
+#root-widget .modal-header {
+  border-color: var(--darkBG);
+}
+#root-widget .dropdown-item:focus,
+#root-widget .dropdown-item:hover {
+  outline: 0;
+  border: none;
+  background-color: var(--darkBG);
+}
+#root-widget .tooltip-inner {
+  padding: 5px 8px 6px;
+  font-size: 0.95rem;
+}
+#root-widget .tooltip .arrow {
+  opacity: 0.8;
+}
 /* Borders */
-#root-widget .note-tab-wrapper, #root-widget .fancytree-node {
-    border-radius: 0;
+#root-widget .fancytree-node,
+#root-widget .note-tab-wrapper {
+  border-radius: 0;
 }
 #root-widget .note-tab-wrapper {
-    border-right: 1px solid var(--darkBG);
-    margin-left: -5px;
+  margin-left: -5px;
+  border-right: 1px solid var(--darkBG);
 }
 #root-widget .note-title-widget input {
-    outline: none;
+  outline: 0;
 }
 /* Icons */
-#root-widget #launcher-pane .icon-action, #root-widget .ribbon-tab-title .bx {
-    font-size: 1.3rem;
-    text-align: center;
+#root-widget #launcher-pane .icon-action,
+#root-widget .ribbon-tab-title .bx {
+  text-align: center;
+  font-size: 1.3rem;
+}
+/* Tabs */
+#root-widget .tab-row-widget {
+  margin-left: -5px;
+  padding-left: 5px;
+  width: calc(100% + 5px);
+  height: 36px;
+}
+#root-widget .tab-row-widget-container {
+  height: 36px;
+  background: var(--medBG);
+}
+#root-widget .note-tab-wrapper {
+  padding: 1px 6px 0 11px;
+  height: 36px;
+  line-height: 36px;
+}
+#root-widget .ribbon-tab-title.active {
+  border-color: #f9826c;
+}
+#root-widget .note-new-tab {
+  border-radius: 0;
 }
 /* Scrollbars */
 ::-webkit-scrollbar {
-    width: 8px !important;
+  width: 8px !important;
 }
 ::-webkit-scrollbar-thumb {
-    background: #4f5052 !important;
-    border-width: 0 !important;
-    border-radius: 0 !important;
+  border-width: 0 !important;
+  border-radius: 0 !important;
+  background: #4f5052 !important;
 }
