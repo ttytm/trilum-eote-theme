@@ -1,7 +1,6 @@
-# EOTE Theme
-## A Github Dark dimmed inspired Theme for Trilium Notes
-A dark theme for Trilium Notes which is easy on the eyes and made for high readability and productivity. 
-Inpsired by the github dark dimmed website theme.
+# EOTE Theme for Trilium Notes 
+## Inspired by the GitHub dark dimmed website style
+A dark theme for Trilium Notes which is easy on the eyes and made for high readability and productivity.
 
 ![Preview](https://github.com/tobealive/trilium-theme-eote/blob/main/preview.jpg)
 
