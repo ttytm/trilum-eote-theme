@@ -14,3 +14,6 @@ What i like about the style is how easy on the eyes it is. For me it makes conte
 Disclaimer:
 *I'm doing my best to implement improvements and fix issues as soon as i see them. I'll update the theme from time to time.
 Feel free to leave a message if i can help somehow.*
+
+## Other themes I adapted to work with Trilium Notes:
+- Midnight: https://github.com/tobealive/midnight-theme-trilium
