@@ -223,6 +223,7 @@ body {
   top: 0;
   color: var(--muted-text-color);
   font-size: inherit;
+  border-radius: 0;
 }
 #root-widget .note-new-tab:hover {
   background-color: var(--hover-item-background-color);
@@ -231,9 +232,13 @@ body {
 #root-widget .note-tab-wrapper:hover {
   background-color: var(--hover-item-background-color)
 }
-#root-widget .tab-row-widget .note-tab[active] .note-tab-wrapper:hover {
+#root-widget .tab-row-widget .note-tab[active] .note-tab-wrapper:hover,
+#root-widget .tab-row-widget .note-tab[active] .note-tab-close:hover {
   background-color: var(--active-tab-background-color);
   border: none;
+}
+#root-widget .tab-row-widget .note-tab .note-tab-close:hover span {
+  color: var(--hover-item-text-color);
 }
 /* Menus & Tooltips */
 /* #root-widget not applicable */
