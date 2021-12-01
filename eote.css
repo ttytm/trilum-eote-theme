@@ -114,9 +114,10 @@ body {
 #root-widget .fancytree-title {
   top: 0;
 }
-/*#root-widget span.fancytree-node:hover {
-  background:  var(--hover-item-background-color)
-}*/
+#root-widget span.fancytree-node:hover {
+  background:  var(--hover-item-background-color);
+  border: none;
+}
 #root-widget .tree-actions {
   border: 1px solid #22272e;
   border-bottom: 0;
