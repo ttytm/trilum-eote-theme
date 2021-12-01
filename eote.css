@@ -109,10 +109,13 @@ body {
   font-size: 1rem;
 }
 #root-widget .ui-fancytree li li span.fancytree-active {
-  border-left: 3px solid #f9826c !important;
+  border-left: 3px solid #f9826c !important; 
 }
 #root-widget .fancytree-title {
   top: 0;
+}
+#root-widget .fancytree-active .fancytree-title {
+    font-weight: 600;
 }
 #root-widget span.fancytree-node:hover {
   background:  var(--hover-item-background-color);
@@ -212,6 +215,9 @@ body {
 }
 #root-widget .ribbon-tab-title.active {
   border-color: #f9826c;
+}
+#root-widget .tab-row-widget .note-tab[active] .note-tab-wrapper {
+    font-weight: 600;
 }
 #root-widget .note-new-tab {
   width: 36px;
