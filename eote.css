@@ -1,305 +1,327 @@
+/* Table of Contents
+==>
+1. Global
+  1.1. Color Palette & Variables
+  1.2. General Fixes
+  1.3. Typography
+2. Components
+  2.1. Note Cards
+  2.2. Tab Bar
+  2.3. Launcher Pane
+  2.4. File Tree
+  2.5. Menus & Tooltips
+<== */
+
+/* ===[ 1. Global ]=== */
+/* ==[ 1.1. Color Palette & Variables ]== */
 :root {
-  /* Color Palette */
-  --darkBG: #22272e;
-  --medBG: #2d333b;
+	--eote-background-color-primary: #22272e;
+	--eote-background-color-secondary: #2d333b;
+	--eote-font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+		Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	--eote-text-color-primary: #adbac7;
 }
 body {
-  /* Backgrounds */
-  --main-background-color: var(--darkBG);
-  --main-border-color: #7a8ba654;
-  --menu-background-color: var(--darkBG);
-  --accented-background-color: #232425;
-  --more-accented-background-color: #4c4e68;
-  --header-background-color: #393838;
-  --modal-background-color: #282525;
-  --launcher-pane-background-color: var(--medBG);
-  --left-pane-background-color: var(--medBG);
-  --inactive-tab-background-color: var(--medBG);
-  --accented-background-color: var(--medBG);
-  --active-tab-background-color: var(--darkBG);
-  --active-item-background-color: var(--darkBG);
-  --modal-background-color: var(--darkBG);
-  --active-item-text-color: #f8f9fa;
-  --tooltip-background-color: var(--medBG);
-  --hover-item-background-color: #444c56;
-  --main-border-color: #768390;
-  --button-border-color: #8d9ca39c;
-  --button-border-radius: 0;
-  /* Fonts */
-  --main-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --main-text-color: #adbac7;
-  --detail-font-family: var(--main-font-family);
-  --tree-font-family: var(--main-font-family);
-  --hover-item-text-color: var(--menu-text-color);
-  --link-color: #52a2ff;
-  --muted-text-color: #757d86;
+	--main-background-color: var(--eote-background-color-primary);
+	--accented-background-color: var(--eote-background-color-secondary);
+	--more-accented-background-color: #4c4e68;
+	--menu-background-color: var(--eote-background-color-primary);
+	--header-background-color: #393838;
+	--launcher-pane-background-color: var(--eote-background-color-secondary);
+	--left-pane-background-color: var(--eote-background-color-secondary);
+	--modal-background-color: var(--eote-background-color-primary);
+	--active-tab-background-color: var(--eote-background-color-primary);
+	--inactive-tab-background-color: var(--eote-background-color-secondary);
+	--active-item-background-color: var(--eote-background-color-primary);
+	--hover-item-background-color: #444c56;
+	--tooltip-background-color: var(--eote-background-color-secondary);
+	--main-border-color: #768390;
+	--button-border-color: #8d9ca39c;
+	--button-border-radius: 0;
+	--main-font-family: var(--eote-font-main);
+	--detail-font-family: var(--main-font-family);
+	--tree-font-family: var(--main-font-family);
+	--main-text-color: var(--eote-text-color-primary);
+	--hover-item-text-color: var(--main-text-color);
+	--active-item-text-color: #f8f9fa;
+	--link-color: #52a2ff;
+	--muted-text-color: #757d86;
 }
 
-/* Using #root-widget ID to override main theme styles without the use of !important */
-
-/* Typography General */
-#root-widget h1,
-#root-widget h2,
-#root-widget h3,
-#root-widget h4,
-#root-widget h5,
-#root-widget h6 {
-  font-weight: 700;
+/* ==[ 1.2. General Fixes ]== */
+/* Scrollbars */
+::-webkit-scrollbar {
+	width: 8px !important;
 }
+::-webkit-scrollbar-thumb {
+	border-width: 0 !important;
+	border-radius: 0 !important;
+	background: #4f5052 !important;
+}
+/* Cursors */
+.gutter.gutter-horizontal {
+	cursor: col-resize !important;
+}
+
+/* ==[ 1.3. Typography ]== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700 !important;
+}
+/* Use #root-widget to override trillium default themes styles without the need to redundantly use !important */
 #root-widget h2 {
-  margin-block-start: 1em;
-  margin-block-end: 0.83em;
+	margin-block-start: 1em;
+	margin-block-end: 0.83em;
 }
 #root-widget h3 {
-  margin-block-start: 1.2em;
-  margin-block-end: 1em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-}
-#root-widget .CodeMirror-lines {
-  font-size: 0.95rem;
+	margin-block-start: 1.2em;
+	margin-block-end: 1em;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
 }
 /* Note Title */
 #root-widget .title-row {
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 #root-widget .note-title {
-  font-weight: 700;
-  font-size: 160%;
-  line-height: 50px;
-}
-/* Notecards */
-#root-widget .note-book-card {
-  margin: 4px 7px 4px 0;
-  border-radius: 5px;
-}
-#root-widget .note-book-card h2 {
-  font-size: 1.25em;
-
-  margin-block-start: 0.3em;
-}
-#root-widget .note-book-card .note-book-title .rendered-note-attributes {
-  font-weight: 400;
-}
-/* Left Pane General */
-#root-widget #launcher-pane {
-  border-right: 1px solid #22272e;
-}
-#root-widget #launcher-pane .global-menu-button {
-  background-size: 30px;
-}
-#root-widget #launcher-pane .icon-action {
-  padding-left: 15.5px;
-  width: 50px;
-}
-#root-widget #launcher-pane .icon-action:hover {
-  color: #f9826c;
-}
-/* Tree */
-#root-widget .ui-fancytree ul {
-  padding-left: 0;
-}
-#root-widget .treeitem {
-  position: relative;
-}
-#root-widget
-  .fancytree-node:not(.fancytree-loading)
-  .fancytree-expander:before {
-  font-size: 1rem;
-}
-#root-widget .ui-fancytree li li span.fancytree-active {
-  border-left: 3px solid #f9826c !important; 
-}
-#root-widget .fancytree-title {
-  top: 0;
-}
-#root-widget .fancytree-active .fancytree-title {
-    font-weight: 600;
-}
-#root-widget span.fancytree-node:hover {
-  background:  var(--hover-item-background-color);
-  border: none;
-}
-#root-widget .tree-actions {
-  border: 1px solid #22272e;
-  border-bottom: 0;
-}
-#root-widget button.tree-floating-button {
-  border: none;
-  font-size: 1.3rem;
-}
-#root-widget .bx.tree-item-button {
-  position: absolute;
-  right: 10px;
-  padding-top: 2px;
-  height: 38px;
-  border: none;
-  font-size: inherit;
-  line-height: 38px;
-}
-#root-widget .bx.tree-item-button:hover,
-#root-widget button.tree-floating-button:hover {
-  color: #f9826c;
-}
-/* Treeview - full width background indicator for hover and active status. 
-* A generic version of the style below can ne achieved using jQuery. Script is not written yet. 
-* Until then to support deeper structures just extend the code below */
-.ui-fancytree > li > span.fancytree-node {
-  padding-left: 10px;
-}
-.ui-fancytree > li > ul > li > span.fancytree-node {
-  padding-left: 10px;
-}
-.ui-fancytree li li li span.fancytree-node {
-  padding-left: 25px;
-}
-.ui-fancytree li li li li span.fancytree-node {
-  padding-left: 40px;
-}
-.ui-fancytree li li li li li span.fancytree-node {
-  padding-left: 55px;
-}
-.ui-fancytree li li li li li li span.fancytree-node {
-  padding-left: 70px;
-}
-.ui-fancytree li li li li li li li span.fancytree-node {
-  padding-left: 85px;
-}
-.ui-fancytree li li li li li li li li span.fancytree-node {
-  padding-left: 100px;
-}
-.ui-fancytree li li li li li li li li li span.fancytree-node {
-  padding-left: 115px;
-}
-.ui-fancytree li li li li li li li li li li span.fancytree-node {
-  padding-left: 130px;
-}
-.ui-fancytree li li li li li li li li li li li span.fancytree-node {
-  padding-left: 145px;
-}
-/*** General Fixes ***/
-/* Borders */
-#root-widget .fancytree-node,
-#root-widget .note-tab-wrapper {
-  border-radius: 0;
-}
-#root-widget .note-tab-wrapper {
-  margin-left: -5px;
-  border-right: 1px solid var(--darkBG);
+	font-weight: 700;
+	font-size: 160%;
+	line-height: 50px;
 }
 #root-widget .note-title-widget input {
-  outline: 0;
+	outline: 0;
+}
+/* Code Mirror */
+#root-widget .CodeMirror-lines {
+	font-size: 0.95rem;
 }
 /* Icons */
 #root-widget #launcher-pane .icon-action,
 #root-widget .ribbon-tab-title .bx {
-  text-align: center;
-  font-size: 1.3rem;
+	text-align: center;
+	font-size: 1.3rem;
 }
-/* Tabs */
+/* ===[ 2. Components ]=== */
+/* ==[ 2.1. Note Cards ]== */
+/* Notecards */
+#root-widget .note-book-card {
+	margin: 4px 7px 4px 0;
+	border-radius: 5px;
+}
+#root-widget .note-book-card h2 {
+	font-size: 1.25em;
+
+	margin-block-start: 0.3em;
+}
+#root-widget .note-book-card .note-book-title .rendered-note-attributes {
+	font-weight: 400;
+}
+/* ==[ 2.2. Tab Bar ]== */
 #root-widget .tab-row-widget {
-  margin-left: -5px;
-  padding-left: 5px;
-  width: calc(100% + 5px);
-  height: 36px;
+	margin-left: -5px;
+	padding-left: 5px;
+	width: calc(100% + 5px);
+	height: 36px;
 }
 #root-widget .tab-row-widget-container {
-  height: 36px;
-  background: var(--medBG);
+	height: 36px;
+	background: var(--eote-background-color-secondary);
 }
 #root-widget .note-tab-wrapper {
-  padding: 1px 6px 0 11px;
-  height: 36px;
-  line-height: 36px;
+	margin-left: -5px;
+	padding: 1px 6px 0 11px;
+	height: 36px;
+	border-right: 1px solid var(--eote-background-color-primary);
+	border-radius: 0;
+	line-height: 36px;
 }
 #root-widget .ribbon-tab-title.active {
-  border-color: #f9826c;
+	border-color: #f9826c;
 }
 #root-widget .tab-row-widget .note-tab[active] .note-tab-wrapper {
-    font-weight: 600;
+	font-weight: 600;
 }
 #root-widget .note-new-tab {
-  width: 36px;
-  height: 36px;
-  border-radius: 0;
-  line-height: 36px;
+	width: 36px;
+	height: 36px;
+	border-radius: 0;
+	line-height: 36px;
 }
 #root-widget .tab-row-widget .note-tab .note-tab-close span,
 #root-widget .note-new-tab {
-  top: 0;
-  color: var(--muted-text-color);
-  font-size: inherit;
-  border-radius: 0;
+	top: 0;
+	border-radius: 0;
+	color: var(--muted-text-color);
+	font-size: inherit;
 }
 #root-widget .note-new-tab:hover {
-  background-color: var(--hover-item-background-color);
-  color: var(--hover-item-text-color);
+	background-color: var(--hover-item-background-color);
+	color: var(--hover-item-text-color);
 }
 #root-widget .note-tab-wrapper:hover {
-  background-color: var(--hover-item-background-color)
+	background-color: var(--hover-item-background-color);
 }
 #root-widget .tab-row-widget .note-tab[active] .note-tab-wrapper:hover,
 #root-widget .tab-row-widget .note-tab[active] .note-tab-close:hover {
-  background-color: var(--active-tab-background-color);
-  border: none;
+	border: none;
+	background-color: var(--active-tab-background-color);
 }
 #root-widget .tab-row-widget .note-tab .note-tab-close:hover span {
-  color: var(--hover-item-text-color);
+	color: var(--hover-item-text-color);
 }
-/* Menus & Tooltips */
-/* #root-widget not applicable */
+
+/* ==[ 2.3. Laucher Pane ]== */
+#root-widget #launcher-pane {
+	border-right: 1px solid #22272e;
+}
+#root-widget #launcher-pane .global-menu-button {
+	background-size: 30px;
+}
+#root-widget #launcher-pane .icon-action {
+	padding-left: 15.5px;
+	width: 50px;
+}
+#root-widget #launcher-pane .icon-action:hover {
+	color: #f9826c;
+}
+
+/* ==[ 2.4. File Tree ]== */
+#root-widget .ui-fancytree ul {
+	padding-left: 0;
+}
+#root-widget .treeitem {
+	position: relative;
+}
+#root-widget .fancytree-node {
+	border-radius: 0;
+}
+#root-widget
+	.fancytree-node:not(.fancytree-loading)
+	.fancytree-expander:before {
+	font-size: 1rem;
+}
+#root-widget .ui-fancytree li li span.fancytree-active {
+	border-left: 3px solid #f9826c !important;
+}
+#root-widget .fancytree-title {
+	top: 0;
+}
+#root-widget .fancytree-active .fancytree-title {
+	font-weight: 600;
+}
+#root-widget span.fancytree-node:hover {
+	border: none;
+	background: var(--hover-item-background-color);
+}
+#root-widget .tree-actions {
+	border: 1px solid #22272e;
+	border-bottom: 0;
+}
+#root-widget button.tree-floating-button {
+	border: none;
+	font-size: 1.3rem;
+}
+#root-widget .bx.tree-item-button {
+	position: absolute;
+	right: 10px;
+	padding-top: 2px;
+	height: 38px;
+	border: none;
+	font-size: inherit;
+	line-height: 38px;
+}
+#root-widget .bx.tree-item-button:hover,
+#root-widget button.tree-floating-button:hover {
+	color: var(--active-item-text-color);
+}
+/* Use full width background for hover and active state of nested list items. 
+Extend the code below for deeper nesting structure if neccecary.
+As an alternative its possible to add aad a script that automates this. */
+#root-widget .ui-fancytree ul {
+	padding-left: 0;
+}
+.ui-fancytree > li > span.fancytree-node {
+	padding-left: 10px;
+}
+.ui-fancytree > li > ul > li > span.fancytree-node {
+	padding-left: 10px;
+}
+.ui-fancytree li li li span.fancytree-node {
+	padding-left: 25px;
+}
+.ui-fancytree li li li li span.fancytree-node {
+	padding-left: 40px;
+}
+.ui-fancytree li li li li li span.fancytree-node {
+	padding-left: 55px;
+}
+.ui-fancytree li li li li li li span.fancytree-node {
+	padding-left: 70px;
+}
+.ui-fancytree li li li li li li li span.fancytree-node {
+	padding-left: 85px;
+}
+.ui-fancytree li li li li li li li li span.fancytree-node {
+	padding-left: 100px;
+}
+.ui-fancytree li li li li li li li li li span.fancytree-node {
+	padding-left: 115px;
+}
+.ui-fancytree li li li li li li li li li li span.fancytree-node {
+	padding-left: 130px;
+}
+.ui-fancytree li li li li li li li li li li li span.fancytree-node {
+	padding-left: 145px;
+}
+
+/* ==[ 2.5. Menus & Tooltips ]== */
+/* #root-widget not applicable therefore extended use of !important */
 .dropdown-menu {
-  margin: 0 !important;
-  padding: 3px 0 4px !important;
-  border: none !important;
-  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
-    0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12 !important);
+	margin: 0 !important;
+	padding: 3px 0 4px !important;
+	border: none !important;
+	box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+		0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12) !important;
 }
 .dropdown-item {
-  padding: 3px 10px 2.5px !important;
-  line-height: 24px !important;
+	padding: 3px 10px 2.5px !important;
+	line-height: 24px !important;
 }
 .dropdown-item kbd {
-  margin-left: 10px !important;
-  color: #9aa0a6 !important;
-  font-weight: 300 !important;
-  font-size: 0.8rem !important;
-  font-family: var(--main-font-family) !important;
+	margin-left: 10px !important;
+	color: #9aa0a6 !important;
+	font-weight: 300 !important;
+	font-size: 0.8rem !important;
+	font-family: var(--main-font-family) !important;
 }
 .dropdown-item span.bx {
-  margin-right: 3px !important;
-  color: #9aa0a6 !important;
-  font-size: 0.9rem !important;
-  line-height: 24px !important;
+	margin-right: 3px !important;
+	color: #9aa0a6 !important;
+	font-size: 0.9rem !important;
+	line-height: 24px !important;
 }
 .dropdown-item.disabled span {
-  color: #757d86 !important;
+	color: #757d86 !important;
 }
 .dropdown-divider,
 .modal-footer,
 .modal-header {
-  border-color: var(--darkBG) !important;
+	border-color: var(--eote-background-color-primary) !important;
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
-  outline: 0 !important;
-  border: none !important;
-  background-color: var(--darkBG) !important;
+	outline: 0 !important;
+	border: none !important;
+	background-color: var(--eote-background-color-primary) !important;
 }
 .tooltip-inner {
-  padding: 5px 8px 6px !important;
-  font-size: 0.95rem !important;
+	padding: 5px 8px 6px !important;
+	font-size: 0.95rem !important;
 }
 .tooltip .arrow {
-  opacity: 0.8 !important;
-}
-/* Scrollbars */
-::-webkit-scrollbar {
-  width: 8px !important;
-}
-::-webkit-scrollbar-thumb {
-  border-width: 0 !important;
-  border-radius: 0 !important;
-  background: #4f5052 !important;
+	opacity: 0.8 !important;
 }
