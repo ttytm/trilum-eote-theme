@@ -170,7 +170,6 @@ h6 {
 }
 #root-widget .tab-row-widget .note-tab[active] .note-tab-wrapper:hover,
 #root-widget .tab-row-widget .note-tab[active] .note-tab-close:hover {
-	border: none;
 	background-color: var(--active-tab-background-color);
 }
 #root-widget .tab-row-widget .note-tab .note-tab-close:hover span {
