@@ -6,8 +6,8 @@ To me, such styles make the content more readable and are good for productive us
 
 ## Preview
 
-_(Might be outdated)_
-![Preview](https://github.com/tobealive/trilium-theme-eote/blob/main/preview.jpg)
+![Preview](./preview.jpg)
+_<sup>(Might be outdated)</sup>_
 
 ## Installation
 
