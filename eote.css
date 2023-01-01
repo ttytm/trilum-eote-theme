@@ -17,8 +17,8 @@
 :root {
 	--eote-background-color-primary: #22272e;
 	--eote-background-color-secondary: #2d333b;
-	--eote-font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-		Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	--eote-font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji";
 	--eote-text-color-primary: #adbac7;
 }
 body {
@@ -197,25 +197,24 @@ h6 {
 	position: relative;
 }
 #root-widget .fancytree-node {
+	border: none;
+	border-left: 3px solid transparent !important;
 	border-radius: 0;
 }
-#root-widget
-	.fancytree-node:not(.fancytree-loading)
-	.fancytree-expander:before {
-	font-size: 1rem;
+#root-widget span.fancytree-node:hover {
+	background: var(--hover-item-background-color);
 }
 #root-widget .ui-fancytree li li span.fancytree-active {
-	border-left: 3px solid #f9826c !important;
+	border-color: #f9826c !important;
+}
+#root-widget .fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
+	font-size: 1rem;
 }
 #root-widget .fancytree-title {
 	top: 0;
 }
 #root-widget .fancytree-active .fancytree-title {
 	font-weight: 600;
-}
-#root-widget span.fancytree-node:hover {
-	border: none;
-	background: var(--hover-item-background-color);
 }
 #root-widget .tree-actions {
 	border: 1px solid #22272e;
@@ -284,8 +283,8 @@ As an alternative its possible to add aad a script that automates this. */
 	margin: 0 !important;
 	padding: 3px 0 4px !important;
 	border: none !important;
-	box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
-		0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12) !important;
+	box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+		0 9px 46px 8px rgba(0, 0, 0, 0.12) !important;
 }
 .dropdown-item {
 	padding: 3px 10px 2.5px !important;
