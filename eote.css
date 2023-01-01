@@ -99,6 +99,9 @@ h6 {
 #root-widget .CodeMirror-lines {
 	font-size: 0.95rem;
 }
+#root-widget .cm-matchhighlight {
+	background: #ccc;
+}
 /* Icons */
 #root-widget #launcher-pane .icon-action,
 #root-widget .ribbon-tab-title .bx {
