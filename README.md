@@ -1,25 +1,28 @@
-# EOTE Theme for Trilium Notes 
+# EOTE Theme for Trilium Notes
 
-*Inspired by the GitHub dark dimmed website style.*
+_Inspired by the GitHub dark dimmed website style._
 
-What i like about the style is how easy on the eyes it is. For me it makes content more readable and is good for productive use.
+To me, such styles make the content more readable and are good for productive use with low eye strain.
 
 ## Preview
+
 _(Might be outdated)_
 ![Preview](https://github.com/tobealive/trilium-theme-eote/blob/main/preview.jpg)
 
 ## Installation
-- Create a new note inside your Trilium Notes and set the Note Type to _CSS_
-- Copy the content of the themes .css file inside the Note you just created
-- Add the label _#appCss_ 
-  - You can do that in the _Owned Attributes_ on the top of your note (Alt+A)
-  - If are currently using other custom themes, make sure the midnight theme is the only one with the _#appCss_ label 
-- Reload (Ctrl+R) 
 
+- Create a new note inside your Trilium Notes and set the Note Type to `CSS`
+- Copy the content of the themes `.css` file inside the Note you just created
+- Add the label `#appCss`
+  - You can do that in the `Owned Attributes` on the top of your note <kbd>Alt+A</kbd>
+  - If are currently using other custom themes, make sure the theme you intend to use is the only one with the `#appCss` label
+- Reload <kbd>Ctrl+R</kbd>
 
 ---
+
 Disclaimer:
-*I'm doing my best to implement improvements and fixes. Feel free to leave a message if i can help somehow.*
+_I'm not a big Trillium user anymore, since I moved all my coding and knowledge management to neovim. But I will do my best to implement improvements and fixes. If I can help in any way, feel free to leave me a message._
 
 ## Other themes I adapted to work with Trilium Notes:
+
 - Midnight: https://github.com/tobealive/midnight-theme-trilium
