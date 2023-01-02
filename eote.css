@@ -129,6 +129,15 @@ h6 {
 }
 
 /* ==[ 2.2. Tab Bar ]== */
+#root-widget .component.title-bar-buttons {
+	height: 36px;
+}
+#root-widget .title-bar-buttons div button.icon-action,
+#root-widget .title-bar-buttons div {
+	width: 36px;
+	height: 36px;
+	font-size: 1.125rem;
+}
 #root-widget .tab-row-widget {
 	margin-left: -5px;
 	padding-left: 5px;
