@@ -100,7 +100,7 @@ h6 {
 	font-size: 0.95rem;
 }
 #root-widget .cm-matchhighlight {
-	background: #ccc;
+	background-color: var(--main-text-color);
 }
 /* Icons */
 #root-widget #launcher-pane .icon-action,
