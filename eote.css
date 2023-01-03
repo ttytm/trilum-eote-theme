@@ -35,8 +35,8 @@ body {
 	--active-item-background-color: var(--eote-background-color-primary);
 	--hover-item-background-color: #444c56;
 	--tooltip-background-color: var(--eote-background-color-secondary);
-	--main-border-color: #768390;
-	--button-border-color: #8d9ca39c;
+	--main-border-color: #373e47;
+	--button-border-color: rgba(205,217,229,0.1);
 	--button-border-radius: 0;
 	--main-font-family: var(--eote-font-main);
 	--detail-font-family: var(--main-font-family);
