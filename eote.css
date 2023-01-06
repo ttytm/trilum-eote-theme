@@ -64,48 +64,49 @@ body {
 }
 
 /* Checkboxes */
-#root-widget input[type=checkbox] {
-    /*display: none;*/
-    width: 0;
-    height: 0;
-    margin-right: 22px;
-    position: relative;
-    text-align: center;
+#root-widget input[type="checkbox"] {
+	position: relative;
+	margin-right: 22px;
+	/*display: none;*/
+	width: 0;
+	height: 0;
+	text-align: center;
 }
-#root-widget input[type=checkbox]:focus {
-    box-shadow: none;
-    outline: none;
+#root-widget input[type="checkbox"]:focus {
+	outline: none;
+	box-shadow: none;
 }
-#root-widget input[type=checkbox]::before {
-    content: '';
-    position: relative;
-    top: -16px;
-    display: block;
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--hover-item-background-color);
-    background: var(--main-background-color);
-    box-sizing: content-box;
+#root-widget input[type="checkbox"]::before {
+	position: relative;
+	top: -16px;
+	display: block;
+	box-sizing: content-box;
+	width: 20px;
+	height: 20px;
+	border: 1px solid var(--hover-item-background-color);
+	background: var(--main-background-color);
+	content: "";
 }
-#root-widget input[type=checkbox]:checked::before {
-    border: 1px solid var(--link-color);
-    background: var(--main-border-color);
+#root-widget input[type="checkbox"]:checked::before {
+	border: 1px solid var(--link-color);
+	background: var(--main-border-color);
 }
-#root-widget input[type=checkbox]::after {
-    content: '✓';
-    text-indent: 4px;
-    position: absolute;
-    top: -17px;
-    display: none;
-    width: 20px;
-    height: 20px;
-    box-sizing: content-box;
-    text-align: center;
+#root-widget input[type="checkbox"]::after {
+	position: absolute;
+	top: -17px;
+	display: none;
+	box-sizing: content-box;
+	width: 20px;
+	height: 20px;
+	content: "✓";
+	text-align: center;
+	text-indent: 4px;
 }
-#root-widget input[type=checkbox]:checked::after {
-    display: block;
-    color: var(--link-color);
+#root-widget input[type="checkbox"]:checked::after {
+	display: block;
+	color: var(--link-color);
 }
+
 /* ==[ 1.3. Typography ]== */
 h1,
 h2,
