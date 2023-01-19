@@ -255,6 +255,7 @@ h6 {
 }
 #root-widget #launcher-pane .launcher-button {
 	width: 50px;
+	outline: 0;
 }
 #root-widget #launcher-pane .launcher-button:hover {
 	color: #f9826c;
@@ -270,8 +271,8 @@ As an alternative its possible to add aad a script that automates this. */
 #root-widget .fancytree-node {
 	padding-left: 10px;
 	border: 0;
-	border-radius: 0;
 	border-left: 3px solid transparent;
+	border-radius: 0;
 }
 #root-widget .ui-fancytree li li li .fancytree-node {
 	padding-left: 27px;
@@ -298,7 +299,7 @@ As an alternative its possible to add aad a script that automates this. */
 	padding-left: 150px;
 }
 #root-widget .fancytree-node.fancytree-active {
-	border-color: #f9826c;	
+	border-color: #f9826c;
 }
 #root-widget .fancytree-node:hover {
 	background: var(--hover-item-background-color);
