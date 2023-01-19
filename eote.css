@@ -261,46 +261,53 @@ h6 {
 }
 
 /* ==[ 2.4. File Tree ]== */
-#root-widget .ui-fancytree ul[role="group"] {
-	padding-left: 19px;
-}
-#root-widget ul.fancytree-container li[role="treeitem"] {
-	contain: inherit;
+/* Use full width background for hover and active state of nested list items. 
+Extend the code below for deeper nesting structure if neccecary.
+As an alternative its possible to add aad a script that automates this. */
+#root-widget .ui-fancytree ul {
+	padding-left: 0;
 }
 #root-widget .fancytree-node {
-	padding-left: 8px;
+	padding-left: 10px;
 	border: 0;
 	border-radius: 0;
-}
-#root-widget .fancytree-node:hover,
-#root-widget .fancytree-node.fancytree-active {
-	border: 0;
-}
-/* Use full width background for hover and active state of nested list items. */
-#root-widget .fancytree-node:before {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	height: 38px;
 	border-left: 3px solid transparent;
-	background: transparent;
-	content: "";
 }
-#root-widget .fancytree-node:hover::before {
+#root-widget .ui-fancytree li li li .fancytree-node {
+	padding-left: 27px;
+}
+#root-widget .ui-fancytree li li li li .fancytree-node {
+	padding-left: 46px;
+}
+#root-widget .ui-fancytree li li li li li .fancytree-node {
+	padding-left: 65px;
+}
+#root-widget .ui-fancytree li li li li li li .fancytree-node {
+	padding-left: 84px;
+}
+#root-widget .ui-fancytree li li li li li li li .fancytree-node {
+	padding-left: 103px;
+}
+#root-widget .ui-fancytree li li li li li li li li .fancytree-node {
+	padding-left: 122px;
+}
+#root-widget .ui-fancytree li li li li li li li li li .fancytree-node {
+	padding-left: 141px;
+}
+#root-widget .ui-fancytree li li li li li li li li li li .fancytree-node {
+	padding-left: 150px;
+}
+#root-widget .fancytree-node.fancytree-active {
+	border-color: #f9826c;	
+}
+#root-widget .fancytree-node:hover {
 	background: var(--hover-item-background-color);
 }
-#root-widget .fancytree-node.fancytree-active::before {
-	border-color: #f9826c;
-	background: var(--active-item-background-color);
-}
-#root-widget .fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
-	margin-right: 4px;
-	font-size: 1rem;
-}
-#root-widget .fancytree-title {
+/* Tree-Node Title */
+#root-widget .fancytree-node.fancytree-title {
 	top: 1px;
 }
-#root-widget .fancytree-active .fancytree-title {
+#root-widget .fancytree-node.fancytree-active .fancytree-title {
 	font-weight: 600;
 }
 /* Tree Icons & Buttons */
@@ -357,6 +364,9 @@ h6 {
 #root-widget button.tree-floating-button {
 	border: none;
 	font-size: 1.25rem;
+}
+#root-widget button.tree-floating-button:hover {
+	color: var(--active-item-text-color);
 }
 
 /* ==[ 2.5. Menus & Tooltips ]== */
