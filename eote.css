@@ -329,7 +329,7 @@ h6 {
 	position: relative;
 	z-index: 1;
 }
-#root-widget .tree-item-button::after {
+#root-widget .tree-item-button:not(.unhoist-button)::after {
 	position: absolute;
 	left: 0;
 	z-index: 0;
