@@ -303,6 +303,10 @@ As an alternative its possible to add aad a script that automates this. */
 #root-widget .fancytree-node:hover {
 	background: var(--hover-item-background-color);
 }
+/* Collapse / Expand Icon */
+#root-widget .fancytree-node .fancytree-expander:before {
+	font-size: 1em;
+}
 /* Tree-Node Title */
 #root-widget .fancytree-node.fancytree-title {
 	top: 1px;
