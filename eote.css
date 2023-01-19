@@ -253,8 +253,7 @@ h6 {
 #root-widget #launcher-pane .global-menu-button {
 	background-size: 30px;
 }
-#root-widget #launcher-pane .icon-action {
-	padding-left: 15.5px;
+#root-widget #launcher-pane .launcher-button {
 	width: 50px;
 }
 #root-widget #launcher-pane .launcher-button:hover {
