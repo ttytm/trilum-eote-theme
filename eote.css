@@ -311,24 +311,24 @@ h6 {
 #root-widget .tree-item-button,
 #root-widget .fancytree-custom-icon {
 	z-index: 1;
+	border: 0;
 	font-size: 1.125em;
 }
-#root-widget .tree-item-button {
+#root-widget .tree-item-button:not(.unhoist-button) {
 	position: absolute;
 	right: 10px;
-	border: none;
+}
+#root-widget .tree-item-button.unhoist-button {
+	position: relative;
 }
 #root-widget .tree-item-button.enter-workspace-button {
 	right: 38px;
-}
-#root-widget .tree-item-button.unhoist-button {
-	position: inherit;
 }
 #root-widget .tree-item-button::before {
 	position: relative;
 	z-index: 1;
 }
-#root-widget .tree-item-button:not(.unhoist-button)::after {
+#root-widget .tree-item-button::after {
 	position: absolute;
 	left: 0;
 	z-index: 0;
