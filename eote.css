@@ -188,8 +188,8 @@ h6 {
 #root-widget .component.title-bar-buttons {
 	height: 36px;
 }
-#root-widget .title-bar-buttons div button.icon-action,
-#root-widget .title-bar-buttons div {
+#root-widget .title-bar-buttons div,
+#root-widget .title-bar-buttons button.btn {
 	width: 36px;
 	height: 36px;
 	font-size: 1.125rem;
