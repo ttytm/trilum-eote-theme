@@ -162,7 +162,7 @@ h6 {
 	background-color: var(--main-text-color);
 }
 /* Icons */
-#root-widget #launcher-pane .icon-action,
+#root-widget #launcher-pane .launcher-button,
 #root-widget .ribbon-tab-title .bx {
 	text-align: center;
 	font-size: 1.3rem;
