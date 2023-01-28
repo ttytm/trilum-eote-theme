@@ -247,8 +247,12 @@ h6 {
 	background-size: 30px;
 }
 #root-widget #launcher-pane .launcher-button {
-	width: 50px;
+	padding: 0;
+	width: 100%;
 	outline: 0;
+}
+#root-widget #launcher-pane .right-dropdown-widget {
+	width: 100%;
 }
 #root-widget #launcher-pane .launcher-button:hover {
 	color: #f9826c;
