@@ -371,49 +371,50 @@ As an alternative its possible to add aad a script that automates this. */
 }
 
 /* ==[ 2.5. Menus & Tooltips ]== */
-#root-widget .dropdown-menu {
-	margin: 0;
-	padding: 3px 0 4px;
-	border: 0;
-	box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14),
-		0 9px 46px 8px rgba(0, 0, 0, 0.12);
-}
-#root-widget .dropdown-item {
-	padding: 3.5px 10px;
+.dropdown-menu {
+	margin: 0 !important;
+	padding: 3px 0 4px !important;
 	border: 0 !important;
+	box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+		0 9px 46px 8px rgba(0, 0, 0, 0.12) !important;
+}
+.dropdown-menu .dropdown-item, .dropdown-menu .dropdown-header{
+	border: 0 !important;
+	outline: 0 !important;
+}
+.dropdown-menu .dropdown-item {
+	padding: 3.5px 10px !important;
 	color: var(--hover-item-text-color) !important;
-	line-height: 24px;
+	line-height: 24px !important;
 }
-#root-widget .dropdown-item kbd {
-	margin-left: 10px;
-	color: var(--muted-text-color);
-	font-weight: 300;
-	font-size: 0.8em;
-	font-family: var(--main-font-family);
+.dropdown-menu .dropdown-item kbd {
+	margin-left: 10px !important;
+	color: var(--muted-text-color) !important;
+	font-weight: 300 !important;
+	font-size: 0.8em !important;
+	font-family: var(--main-font-family) !important;
 }
-#root-widget .dropdown-item span.bx {
-	top: 1px;
-	color: var(--muted-text-color);
-	font-size: 0.925em;
+.dropdown-menu .dropdown-item span.bx {
+	top: 1px !important;
+	color: var(--muted-text-color) !important;
+	font-size: 0.925em !important;
 }
-#root-widget .dropdown-item.disabled span {
-	color: var(--muted-text-color);
+.dropdown-menu .dropdown-item.disabled span {
+	color: var(--muted-text-color) !important;
 }
-#root-widget .dropdown-item:focus,
-#root-widget .dropdown-item:hover {
-	outline: 0;
-	border: 0;
-	background-color: var(--eote-background-color-primary);
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:hover {
+	background-color: var(--eote-background-color-primary) !important;
 }
-#root-widget .dropdown-divider,
-#root-widget .modal-footer,
-#root-widget .modal-header {
-	border-color: var(--eote-background-color-primary);
+.dropdown-menu .dropdown-divider,
+.modal-footer,
+.modal-header {
+	border-color: var(--main-border-color) !important;
 }
-#root-widget .tooltip-inner {
-	padding: 5px 8px 6px;
-	font-size: 0.95rem;
+.tooltip-inner {
+	padding: 5px 8px 6px !important;
+	font-size: 0.95rem !important;
 }
-#root-widget .tooltip .arrow {
-	opacity: 0.8;
+.tooltip .arrow {
+	opacity: 0.8 !important;
 }
