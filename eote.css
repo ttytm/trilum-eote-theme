@@ -67,14 +67,14 @@ body {
 #root-widget .find-widget-box input[type="checkbox"] {
 	position: relative;
 	margin-right: 25px;
-	/*display: none;*/
+	/*display: 0;*/
 	width: 0;
 	height: 0;
 	text-align: center;
 }
 #root-widget .find-widget-box input[type="checkbox"]:focus {
-	outline: none;
-	box-shadow: none;
+	outline: 0;
+	box-shadow: 0;
 }
 #root-widget .find-widget-box input[type="checkbox"]::before {
 	position: relative;
@@ -94,7 +94,7 @@ body {
 #root-widget .find-widget-box input[type="checkbox"]::after {
 	position: absolute;
 	top: -17px;
-	display: none;
+	display: 0;
 	box-sizing: content-box;
 	width: 20px;
 	height: 20px;
@@ -367,7 +367,7 @@ As an alternative its possible to add aad a script that automates this. */
 	color: var(--active-item-text-color);
 }
 #root-widget button.tree-floating-button {
-	border: none;
+	border: 0;
 	font-size: 1.25rem;
 }
 #root-widget button.tree-floating-button:hover {
@@ -406,7 +406,7 @@ As an alternative its possible to add aad a script that automates this. */
 #root-widget .dropdown-item:focus,
 #root-widget .dropdown-item:hover {
 	outline: 0;
-	border: none;
+	border: 0;
 	background-color: var(--eote-background-color-primary);
 }
 #root-widget .dropdown-divider,
