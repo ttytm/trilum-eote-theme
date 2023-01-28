@@ -251,6 +251,7 @@ h6 {
 	border-right: 1px solid #22272e;
 }
 #root-widget #launcher-pane .global-menu-button {
+	outline: 0;
 	background-size: 30px;
 }
 #root-widget #launcher-pane .launcher-button {
