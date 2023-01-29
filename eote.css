@@ -108,7 +108,7 @@ body {
 }
 /* hr */
 #root-widget hr {
-	background: var(--main-border-color)
+	background: var(--main-border-color);
 }
 
 /* ==[ 1.3. Typography ]== */
@@ -379,9 +379,10 @@ As an alternative its possible to add aad a script that automates this. */
 	box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14),
 		0 9px 46px 8px rgba(0, 0, 0, 0.12) !important;
 }
-.dropdown-menu .dropdown-item, .dropdown-menu .dropdown-header{
-	border: 0 !important;
+.dropdown-menu .dropdown-item,
+.dropdown-menu .dropdown-header {
 	outline: 0 !important;
+	border: 0 !important;
 }
 .dropdown-menu .dropdown-item {
 	padding: 3.5px 10px !important;
